@@ -159,12 +159,51 @@
 <li>使用markdown语法：<a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown" target="_blank" rel="external">https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown</a></li>
 </ul>
 </li>
+<li><p>Github注册与建立Repository</p>
+<ul>
+<li><p>Github 官网：<a href="https://github.com" target="_blank" rel="external">https://github.com</a></p>
+</li>
+<li><p>建立Repository</p>
+<ul>
+<li>仓库名必须为【your_user_name.github.io】，我的仓库名为：xiaorong88.github.io</li>
+</ul>
+</li>
+<li><p>_config.yml文件，来建立关联</p>
+<ul>
+<li><p><strong>deploy:</strong></p>
+<p>​    type: git</p>
+<p>​    repo: <a href="https://github.com/xiaorong88/xiaorong88.github.io.git" target="_blank" rel="external">https://github.com/xiaorong88/xiaorong88.github.io.git</a></p>
+<p>​    branch: master</p>
+</li>
+</ul>
+</li>
+<li><p>然后执行命令：</p>
+<blockquote>
+<p><strong>npm install hexo-deployer-git –save</strong></p>
+<p><strong>hexo deploy</strong></p>
+</blockquote>
+</li>
+<li><p>浏览器中输入<a href="http://xiaorong88.github.io/" target="_blank" rel="external">http://xiaorong88.github.io/</a>就行了</p>
+</li>
+</ul>
+</li>
+<li><p>部署步骤</p>
+<ul>
+<li><p>每次部署的步骤，可按以下三步来进行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line"></div><div class="line">hexo generate</div><div class="line"></div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>常用指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">hexo clean #清除缓存和已生成的静态文件</div><div class="line">hexo list #列出风锌资料</div><div class="line"></div><div class="line">hexo --draft #显示草稿</div><div class="line"></div><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div><div class="line">hexo new draft &quot;new draft&quot; #新建草稿</div><div class="line">hexo publish [layout] &lt;filename&gt; #草稿变成文章</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #将.deploy目录部署到GitHub</div><div class="line">hexo help # 查看帮助</div><div class="line">hexo version #查看Hexo的版本</div><div class="line"></div><div class="line"></div><div class="line"># 删除文章</div><div class="line">    # source / _post 找到helloworld.md文件，在本地直接执行删除。</div><div class="line">    # 然后依次执行</div><div class="line">    hexo g</div><div class="line">    hexo d</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/03/菜鸟Hexo安装→建站→博客书写→部署到github/" data-id="cj9nys4ru0001egib11dvhc2n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/03/菜鸟Hexo安装→建站→博客书写→部署到github/" data-id="cj9o5a2lz0001igibc1x2ny3x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -211,7 +250,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/02/hello-world/" data-id="cj9nys4ro0000egib8w942ew7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/02/hello-world/" data-id="cj9o5a2lt0000igibtxp3r7lt" class="article-share-link">Share</a>
       
       
     </footer>
