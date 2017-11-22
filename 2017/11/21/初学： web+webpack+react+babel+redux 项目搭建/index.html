@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>初学 web+webpack+react+babel+redux 项目搭建 | 前端学习之旅（原.net开发）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="环境：windows10 64位 node版本：v9.0.0  npm版本：5.1.1  创建项目文件夹，初始化package.json 1npm init  webpack安装 123npm install webpack --save-dev	//或者全局安装:	npm install -g webpack 项目根目录下手动创建：webpack.config.js  配置项目的入口与出口  1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初学 web+webpack+react+babel+redux 项目搭建">
+<meta property="og:url" content="http://yoursite.com/2017/11/21/初学： web+webpack+react+babel+redux 项目搭建/index.html">
+<meta property="og:site_name" content="前端学习之旅（原.net开发）">
+<meta property="og:description" content="环境：windows10 64位 node版本：v9.0.0  npm版本：5.1.1  创建项目文件夹，初始化package.json 1npm init  webpack安装 123npm install webpack --save-dev	//或者全局安装:	npm install -g webpack 项目根目录下手动创建：webpack.config.js  配置项目的入口与出口  1">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-22T03:22:59.076Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初学 web+webpack+react+babel+redux 项目搭建">
+<meta name="twitter:description" content="环境：windows10 64位 node版本：v9.0.0  npm版本：5.1.1  创建项目文件夹，初始化package.json 1npm init  webpack安装 123npm install webpack --save-dev	//或者全局安装:	npm install -g webpack 项目根目录下手动创建：webpack.config.js  配置项目的入口与出口  1">
+  
+    <link rel="alternate" href="/atom.xml" title="前端学习之旅（原.net开发）" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">前端学习之旅（原.net开发）</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-初学： web+webpack+react+babel+redux 项目搭建" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/21/初学： web+webpack+react+babel+redux 项目搭建/" class="article-date">
+  <time datetime="2017-11-21T09:36:01.000Z" itemprop="datePublished">2017-11-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      初学 web+webpack+react+babel+redux 项目搭建
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="环境：windows10-64位-node版本：v9-0-0-npm版本：5-1-1"><a href="#环境：windows10-64位-node版本：v9-0-0-npm版本：5-1-1" class="headerlink" title="环境：windows10 64位 node版本：v9.0.0  npm版本：5.1.1"></a>环境：windows10 64位 node版本：v9.0.0  npm版本：5.1.1</h2><hr>
+<ol>
+<li><p>创建项目文件夹，初始化package.json</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure>
+</li>
+<li><p>webpack安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install webpack --save-dev</div><div class="line">	//或者全局安装:</div><div class="line">	npm install -g webpack</div></pre></td></tr></table></figure>
+<p>项目根目录下手动创建：webpack.config.js</p>
+<ol>
+<li><p>配置项目的入口与出口</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">module.exports=&#123;</div><div class="line">	entry: __dirname+&quot;/app/main.js&quot;,</div><div class="line">	output: &#123;</div><div class="line">		path: __dirname+&quot;/public&quot;,</div><div class="line">		filename: &quot;out.js&quot;</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>利用webpack的服务部署，配置快捷的执行打包任务</p>
+<ul>
+<li><p>在package.json中配置scripts节点，添加<code>&quot;start&quot;: &quot;webpack&quot;</code></p>
+</li>
+<li><p>在命令提示符中直接输入 <code>npm start</code> 编译打包</p>
+</li>
+</ul>
+</li>
+<li><p>生成Source Maps提供了一种对应编译文件和源文件的方法，使得编译后的代码可读性更高，也更容易调试，需要配置webpack.config.js中的devtool</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">  ……</div><div class="line">  devtool: &apos;eval-source-map&apos;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> | devtool选项                      | 配置结果                                     |<br> | :—————————– | —————————————- |<br> | <code>source-map</code>                   | 在一个单独的文件中产生一个完整且功能完全的文件。这个文件具有最好的<code>source map</code>，但是它会减慢打包速度； |<br> | <code>cheap-module-source-map</code>      | 在一个单独的文件中生成一个不带列映射的<code>map</code>，不带列映射提高了打包速度，但是也使得浏览器开发者工具只能对应到具体的行，不能对应到具体的列（符号），会对调试造成不便； |<br> | <code>eval-source-map</code>              | 使用<code>eval</code>打包源文件模块，在同一个文件中生成干净的完整的<code>source map</code>。这个选项可以在不影响构建速度的前提下生成完整的<code>sourcemap</code>，但是对打包后输出的JS文件的执行具有性能和安全的隐患。在开发阶段这是一个非常好的选项，在生产阶段则一定不要启用这个选项； |<br> | <code>cheap-module-eval-source-map</code> | 这是在打包文件时最快的生成<code>source map</code>的方法，生成的<code>Source Map</code> 会和打包后的<code>JavaScript</code>文件同行显示，没有列映射，和<code>eval-source-map</code>选项具有相似的缺点； |</p>
+</li>
+<li><p>使用webpack构建本地服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//安装工具：</div><div class="line">npm install --save-dev webpack-dev-server</div></pre></td></tr></table></figure>
+<ul>
+<li>修改webpack.config.js配置：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">  ……</div><div class="line">  devServer: &#123;</div><div class="line">    contentBase: &quot;./public&quot;,//本地服务器所加载的页面所在的目录</div><div class="line">    historyApiFallback: true,//不跳转</div><div class="line">    inline: true//实时刷新</div><div class="line">  &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>| devserver的配置选项     | 功能描述                                     |<br>| —————— | —————————————- |<br>| contentBase        | 默认webpack-dev-server会为根文件夹提供本地服务器，如果想为另外一个目录下的文件提供本地服务器，应该在这里设置其所在目录（本例设置到“public”目录） |<br>| port               | 设置默认监听端口，如果省略，默认为”8080“                  |<br>| inline             | 设置为<code>true</code>，当源文件改变时会自动刷新页面                 |<br>| historyApiFallback | 在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为<code>true</code>，所有的跳转将指向index.html |</p>
+<ul>
+<li>修改package.json <code>scripts</code>对象中添加如下命令，用以开启本地服务器</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&quot;scripts&quot;: &#123;</div><div class="line">&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,</div><div class="line">&quot;start&quot;: &quot;webpack&quot;,</div><div class="line">&quot;server&quot;: &quot;webpack-dev-server --open&quot;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+</li>
+<li><p>webpack的Loaders功能</p>
+</li>
+</ol>
+<p>通过使用不同的Loader，webpack有能力调用外部的脚本或工具</p>
+<ul>
+<li>Loaders需要单独安装，并且在webpck.config.js中的modules关键字下进行配置<ul>
+<li><code>test</code>：一个用以匹配loaders所处理文件的拓展名的正则表达式（必须）</li>
+<li><code>loader</code>：loader的名称（必须）</li>
+<li><code>include/exclude</code>:手动添加必须处理的文件（文件夹）或屏蔽不需要处理的文件（文件夹）（可选）；</li>
+<li><code>query</code>：为loaders提供额外的设置选项（可选）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>react安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save react react-dom</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>Babel安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react</div></pre></td></tr></table></figure>
+<ul>
+<li><p>配置webpack.config.js ，允许项目使用ES6已经JSX的语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">module.exports=&#123;</div><div class="line">  ……</div><div class="line">  module: &#123;</div><div class="line">    rules: [</div><div class="line">	      &#123;//jsx与js的配置</div><div class="line">	        test: /(\.jsx|\.js)$/,</div><div class="line">	        exclude: /node_modules/,</div><div class="line">	        use: &#123;</div><div class="line">	          loader: &quot;babel-loader&quot;,</div><div class="line">	          options: &#123;</div><div class="line">	          	presets: [</div><div class="line">                            &quot;es2015&quot;, &quot;react&quot;</div><div class="line">                        ]</div><div class="line">                &#125;</div><div class="line">	        &#125;</div><div class="line">	      &#125;,</div><div class="line">	    ]</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li><p>webpack处理样式表的两个工具：css-loader和style-loader</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//安装插件</div><div class="line">npm install --save-dev style-loader css-loader</div></pre></td></tr></table></figure>
+<ul>
+<li><p>在webpack.config.js中配置loader工具</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">module.exports=&#123;</div><div class="line">  ……</div><div class="line">  module: &#123;</div><div class="line">    rules: [</div><div class="line">    	&#123;//jsx与js的配置</div><div class="line">	        test: /(\.jsx|\.js)$/,</div><div class="line">	        exclude: /node_modules/,</div><div class="line">	        use: &#123;</div><div class="line">	          loader: &quot;babel-loader&quot;,</div><div class="line">	          options: &#123;</div><div class="line">	          	presets: [</div><div class="line">                            &quot;es2015&quot;, &quot;react&quot;</div><div class="line">                        ]</div><div class="line">                &#125;</div><div class="line">	        &#125;</div><div class="line">	      &#125;,</div><div class="line">	      </div><div class="line">	      &#123;//css的配置</div><div class="line">	      	test: /\.css$/,</div><div class="line">	      	use: [</div><div class="line">	      		&#123;</div><div class="line">  					loader: &quot;style-loader&quot;,</div><div class="line">  				&#125;,</div><div class="line">  				&#123;</div><div class="line">  					loader: &quot;css-loader&quot;,</div><div class="line">  					options: &#123;module: true&#125;</div><div class="line">  				&#125;</div><div class="line">			]</div><div class="line">	      &#125;</div><div class="line">	]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li><p>redux安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>webpack之插件（Plugins）</p>
+<ul>
+<li><p>Loaders和Plugins常常被弄混，但是他们其实是完全不同的东西，可以这么来说，loaders是在打包构建过程中用来处理源文件的（JSX，Scss，Less..），一次处理一个，插件并不直接操作单个文件，它直接对整个构建过程其作用。</p>
+</li>
+<li><p>要使用某个插件，我们需要通过<code>npm</code>安装它，然后要做的就是在webpack配置中的plugins关键字部分添加该插件的一个实例（plugins是一个数组）</p>
+<ul>
+<li><p>HtmlWebpackPlugin  是依据一个简单的<code>index.html</code>模板，生成一个自动引用你打包后的JS文件的新<code>index.html</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//安装插件</div><div class="line">npm install --save-dev html-webpack-plugin</div></pre></td></tr></table></figure>
+<p>修改webpack.config.js的插件配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">module.exports=&#123;</div><div class="line">  ……</div><div class="line">  module: &#123;……&#125;&#125;,</div><div class="line">  plugins:[</div><div class="line">  //new 一个这个插件的实例，并传入相关的参数</div><div class="line">  new HtmlWebpackPlugin(&#123;template: __dirname + &quot;/template/index.tmpl.html&quot;&#125;),</div><div class="line">  ],</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>产品阶段的构建</p>
+</li>
+</ol>
+<p>……</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/21/初学： web+webpack+react+babel+redux 项目搭建/" data-id="cjaahi5ew0002vgibdjs708di" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/12/初学：npm安装webpack/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">初学：npm安装webpack</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/学习/" style="font-size: 10px;">学习</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/21/初学： web+webpack+react+babel+redux 项目搭建/">初学 web+webpack+react+babel+redux 项目搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/12/初学：npm安装webpack/">初学：npm安装webpack</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/03/初学：Hexo安装→建站→博客书写→部署到github/">初学：Hexo安装→建站→博客书写→部署到github</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/02/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Xiao Rong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
